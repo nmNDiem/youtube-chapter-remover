@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Chapters Remover",
+  "version": "1.0",
+  "description": "Automatically hides the YouTube Video Chapters panel ('In this video' section) on watch pages.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
